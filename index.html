@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С Днём Рождения, Бодя!</title>
+    <link rel="stylesheet" href="vendor/style.css">
+</head>
+<body>
+<!-- Кнопка управления -->
+<button id="music-toggle" class="music-btn">🎵</button>
+
+<!-- Аудиоплеер -->
+<audio id="bg-music" loop>
+  <source src="assets/audio/music.mp3" type="audio/mpeg">
+</audio>
+
+    <!-- ЦЕНТРАЛЬНЫЙ БЛОК -->
+    <section class="hero-section">
+        <div class="photo-box">
+            <img src="assets/img/banner-wide.png" alt="">
+        </div>
+        
+        <div class="photo-container">
+            <img src="assets/img/photo-boy.jpg" alt="Фото именинника">
+        </div>
+
+        <!-- Главный плеер (структура сохранена, id удалены) -->
+        <div class="player-container">
+            <button class="play-button" aria-label="Воспроизвести">
+                <span class="btn-icon">▶</span>
+            </button>
+
+            <div class="progress-wrapper">
+                <div class="progress-fill"></div>
+                <div class="progress-thumb"></div>
+            </div>
+
+            <audio>
+                <source src="assets/audio/birthday-song.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </section>
+
+    <!-- СРЕДНИЙ БЛОК (КОТ) -->
+    <section class="middle-section">
+        <div class="cat-image-wrapper">
+            <img src="assets/img/cat-party.jpg" >
+        </div>
+    </section>
+
+    <!-- НИЖНИЙ БЛОК (ТЕКСТ И КОТ С ТОРТОМ) -->
+    <section class="middle-section">
+        <div class="cat-image-wrapper">
+            <img src="assets/img/note.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="middle-section">
+        <div class="cat-image-wrapper">
+            <img src="assets/img/star.png" alt="">
+        </div>
+    </section>
+
+    <div class="cake-cat-wrapper">
+        <img src="assets/img/cat-cake.jpg" >
+    </div>
+    
+    <div class="cake-cat-wrapper">
+        <img src="assets/img/voices.png" >
+    </div>
+
+    <!-- КОНТЕЙНЕР ДЛЯ 4 ПЛЕЕРОВ -->
+    <div class="star-players-container">
+        
+        <!-- Плеер 1: Милана (текст справа) -->
+        <div class="star-player text-right">
+            <div class="label-block">
+                <img src="assets/img/milana-label.png" alt="Поздравление от Миланы" class="label-img">
+            </div>
+            
+            <!-- Плеер ВНУТРИ star-player -->
+            <div class="player-container">
+                <button class="play-button" aria-label="Воспроизвести">
+                    <span class="btn-icon">▶</span>
+                </button>
+                <div class="progress-wrapper">
+                    <div class="progress-fill"></div>
+                    <div class="progress-thumb"></div>
+                </div>
+                <audio>
+                    <source src="assets/audio/milana.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <!-- Плеер 2: Семла (текст слева) -->
+        <div class="star-player text-left">
+            <div class="label-block">
+                <img src="assets/img/semlya-label.png" alt="Поздравление от Семлы" class="label-img">
+            </div>
+
+            <!-- Плеер ВНУТРИ star-player -->
+            <div class="player-container">
+                <button class="play-button" aria-label="Воспроизвести">
+                    <span class="btn-icon">▶</span>
+                </button>
+                <div class="progress-wrapper">
+                    <div class="progress-fill"></div>
+                    <div class="progress-thumb"></div>
+                </div>
+                <audio>
+                    <source src="assets/audio/semlya.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <!-- Плеер 3: Тётя Геля (текст справа) -->
+        <div class="star-player text-right">
+            <div class="label-block">
+                <img src="assets/img/tetya-gelya-label.png" alt="Поздравление от тёти Гели" class="label-img">
+            </div>
+
+            <!-- Плеер ВНУТРИ star-player -->
+            <div class="player-container">
+                <button class="play-button" aria-label="Воспроизвести">
+                    <span class="btn-icon">▶</span>
+                </button>
+                <div class="progress-wrapper">
+                    <div class="progress-fill"></div>
+                    <div class="progress-thumb"></div>
+                </div>
+                <audio>
+                    <source src="assets/audio/tetya_gelya.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <!-- Плеер 4: Вика и Арсений (текст слева) -->
+        <div class="star-player text-left">
+            <div class="label-block">
+                <img src="assets/img/vika-arseniy-label.png" alt="Поздравление от Вики и Арсения" class="label-img">
+            </div>
+
+            <!-- Плеер ВНУТРИ star-player -->
+            <div class="player-container">
+                <button class="play-button" aria-label="Воспроизвести">
+                    <span class="btn-icon">▶</span>
+                </button>
+                <div class="progress-wrapper">
+                    <div class="progress-fill"></div>
+                    <div class="progress-thumb"></div>
+                </div>
+                <audio>
+                    <source src="assets/audio/Ars.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+    </div>
+
+<div class="cake-scene">
+  <!-- Карточка 1 -->
+  <div class="card card-1">
+    <img src="assets/img/photo1.jpg" alt="Фото 1" class="card-img">
+  </div>
+
+  <!-- Карточка 2 -->
+  <div class="card card-2">
+    <img src="assets/img/photo2.jpg" alt="Фото 2" class="card-img">
+  </div>
+
+  <!-- Карточка 3 -->
+  <div class="card card-3">
+    <img src="assets/img/photo3.jpg" alt="Фото 3" class="card-img">
+  </div>
+
+  <!-- Карточка 4 -->
+  <div class="card card-4">
+    <img src="assets/img/photo4.jpg" alt="Фото 4" class="card-img">
+  </div>
+
+  <!-- Карточка 5 -->
+  <div class="card card-5">
+    <img src="assets/img/photo5.jpg" alt="Фото 5" class="card-img">
+  </div>
+
+  <!-- Карточка 6 -->
+  <div class="card card-6">
+    <img src="assets/img/photo6.jpg" alt="Фото 6" class="card-img">
+  </div>
+
+  <!-- Карточка 7 -->
+  <div class="card card-7">
+    <img src="assets/img/photo7.jpg" alt="Фото 7" class="card-img">
+  </div>
+
+  <!-- Торт (спереди) -->
+  <img src="assets/img/cake.png" alt="Торт" class="cake-img">
+</div>
+
+
+        <!-- 2. КАРТИНКА ПИСЬМА (центрирована отдельно) -->
+<div class="letter-image-wrapper">
+  <img src="assets/img/achive.png" class="letter-img">
+</div>
+
+
+
+    <script src="vendor/script.js"></script>
+</body>
+</html>

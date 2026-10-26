@@ -1,0 +1,542 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  overflow-x: hidden;
+  position: relative;
+
+  /* Путь от vendor/style.css: поднимаемся на уровень вверх (..), потом идём в assets/img */
+  background-image: url('../assets/img/bg.png');
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: top left;
+  background-attachment: fixed;
+}
+
+
+/* --- ОСТАЛЬНЫЕ СТИЛИ --- */
+.hero-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.photo-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    background-attachment: fixed;
+}
+
+.age-title {
+    font-size: 3rem;
+    color: #FFB7B2;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    font-family: 'Impact', sans-serif;
+}
+
+.photo-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0px;
+    margin-bottom: 0px;
+}
+
+.player-container {
+  width: 100%;
+  max-width: 700px;
+  height: 60px;
+  background-color: #FFD700; /* жёлтый фон */
+  border: 4px solid #000000; /* чёрная рамка */
+  border-radius: 30px;       /* овальные края */
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;            /* центрирует плеер в секции */
+}
+
+.play-button {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-right: 15px;
+}
+
+.play-button .btn-icon {
+  font-size: 24px;
+  color: #000000;
+  line-height: 1;
+}
+
+/* Прогресс-бар */
+.progress-wrapper {
+  flex-grow: 1;
+  height: 8px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  position: relative;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #FFFF00;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: width 0.1s linear;
+}
+
+.progress-thumb {
+  width: 12px;
+  height: 12px;
+  background-color: #000000;
+  border-radius: 50%;
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  pointer-events: none; /* чтобы клик проходил сквозь кружок на шкалу */
+  display: none;        /* показываем только при наведении или активности */
+}
+
+.progress-wrapper:hover .progress-thumb {
+  display: block;
+}
+.middle-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.cat-image-wrapper img {
+    max-width: 1000px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.funny-note {
+   max-width: 1000px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.cake-cat-wrapper {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.cake-cat-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.cat-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFB7B2;
+    text-transform: uppercase;
+}
+
+.final-message {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fffdf0;
+    border-top: 2px dashed #FFB7B2;
+}
+
+.final-message p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.star-players-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.star-player {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.star-player.text-right {
+  flex-direction: row;
+}
+
+.star-player.text-left {
+  flex-direction: row-reverse;
+}
+
+.star-btn {
+  width: 400px;
+  height: 400px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.star-btn:active {
+  transform: scale(0.95);
+}
+
+.star-btn svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.pink-star { color: #FFB7B2; fill: #FFE0E2; }
+.green-star { color: #8BC34A; fill: #C8E6C9; }
+.blue-star { color: #4F8EF7; fill: #C5CAE9; }
+.yellow-star { color: #FFD700; fill: #FFF9C4; }
+
+.star-btn svg path[stroke] { stroke: currentColor; }
+.star-btn.pink-star svg path[fill] { fill: #FFE0E2; }
+.star-btn.green-star svg path[fill] { fill: #C8E6C9; }
+.star-btn.blue-star svg path[fill] { fill: #C5CAE9; }
+.star-btn.yellow-star svg path[fill] { fill: #FFF9C4; }
+
+.star-btn.paused svg path[fill] { fill: rgba(0,0,0,0.15); }
+.star-btn.paused svg path[stroke] { stroke: rgba(0,0,0,0.2); }
+
+.player-progress {
+  flex-grow: 1;
+  height: 8px;
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  min-width: 100px;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background-color: currentColor;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: width 0.1s linear;
+}
+
+.progress-thumb {
+  width: 12px;
+  height: 12px;
+  background-color: currentColor;
+  border-radius: 50%;
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  pointer-events: none;
+  display: none;
+}
+
+.player-progress:hover .progress-thumb {
+  display: block;
+}
+
+.label-block {
+  width: 1000px;
+  height: 600px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.label-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+/* Адаптив для мобильных: убираем лишние отступы и уменьшаем звезды */
+@media (max-width: 768px) {
+  .stars-background-layer {
+    padding-top: 25%;
+  }
+  .star-dot {
+    width: 30px;
+    height: 30px;
+  }
+  .letter-img {
+    max-height: 250px;
+  }
+  .pixel-text-line {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+}
+
+/* Стили для маленьких плееров внутри .star-players-container */
+.star-players-container .player-container {
+  width: 100%;
+  max-width: 400px;
+  height: 45px;
+  background-color: #FFD700;
+  border: 2px solid #000000;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  box-sizing: border-box;
+  margin: 0 auto 16px auto; /* центрируем и добавляем отступ снизу */
+  flex-shrink: 0;
+}
+
+.star-players-container .play-button {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.star-players-container .play-button .btn-icon {
+  font-size: 18px;
+  line-height: 1;
+  color: #000000;
+}
+
+/* Контейнер шкалы — тёмный фон, чтобы жёлтая полоса была видна */
+.star-players-container .progress-wrapper {
+  flex-grow: 1;
+  height: 8px;                 /* чуть выше, чтобы точно было видно */
+  background-color: #000000;  /* чёрный фон шкалы */
+  border-radius: 4px;
+  margin-right: 12px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  min-width: 60px;             /* чтобы не сплющивалось на узких экранах */
+}
+
+/* Сама полоса заполнения — ярко‑жёлтая, на всю высоту родителя */
+.star-players-container .progress-fill {
+  height: 100%;
+  width: 0%;                   /* начальное значение */
+  background-color: #FFFACD;  /* светло‑жёлтый, контрастный к чёрному */
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: width 0.1s linear;
+  z-index: 1;
+}
+
+/* Точка-ползунок (опционально) */
+.star-players-container .progress-thumb {
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  z-index: 2;
+  display: none;              /* скрываем по умолчанию */
+}
+
+.star-players-container .progress-wrapper:hover .progress-thumb {
+  display: block;
+}
+
+.star-players-container audio {
+  display: none;
+}
+
+/* --- СЛОЙ 2: КАРТИНКА ПИСЬМА --- */
+.letter-image-wrapper {
+  width: 100%;
+  text-align: center;
+  margin-top: -60px;
+  position: relative; /* Исправлено: было "cover", должно быть "relative" или "absolute" */
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.letter-img {
+  max-width: 100%;       /* Картинка не вылезет за экран */
+  height: auto;          /* Сохраняет пропорции */
+  display: inline-block;
+  vertical-align: middle;
+  
+  /* ВАРИАНТ 1: Увеличить до 80% ширины экрана (рекомендуется для адаптивности) */
+  width: 25%;            
+  
+  /* ВАРИАНТ 2: Если нужен конкретный размер в пикселях (раскомментируй строку ниже и закомментируй width: 80%) */
+  /* width: 500px; */    
+  
+  /* Убрали max-height: 1400px, так как это слишком много и ломает пропорции при масштабировании */
+  
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1)); /* Добавили тень для объема, чтобы письмо "отлипало" от звезд */
+}
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 24px;
+  background-color: #FFD700; /* Золотой цвет под твой дизайн */
+  color: #333;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 9999;
+  font-size: 16px;
+}
+
+.music-btn:hover {
+  background-color: #ffc107;
+  transform: scale(1.05);
+}
+
+.music-btn.active {
+  background-color: #28a745; /* Зеленый, когда музыка играет */
+  color: white;
+}
+
+.cake-scene {
+  position: relative;
+  /* Контейнер должен быть чуть больше торта, чтобы карточки помещались */
+  width: 1100px; 
+  height: 950px;
+  margin: 0 auto;
+  perspective: 1500px; /* Увеличили перспективу для крупного объекта */
+}
+
+.cake-img {
+  width: 800px;
+  height: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Центрируем сам торт в контейнере */
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: block;
+  pointer-events: none; /* Критично: чтобы мышь «видела» карточки сквозь картинку торта */
+}
+
+.cake-scene {
+  position: relative;
+  width: 1100px; 
+  height: 950px;
+  margin: 0 auto;
+  perspective: 1500px;
+}
+
+
+.card {
+  position: absolute;
+  /* Увеличено в 1.5 раза: было 140px, стало 210px */
+  width: 210px;
+  height: 210px;
+  
+  border: 7px solid #ffffff; /* Чуть толще рамка для масштаба */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  cursor: pointer;
+  
+  transition: transform 0.9s ease-out, box-shadow 0.9s ease-out;
+  
+  z-index: 5;
+  backface-visibility: hidden;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  
+  overflow: hidden; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.9s ease-out;
+}
+
+/* --- ПОЗИЦИОНИРОВАНИЕ КАРТОЧЕК (Чуть правее, ближе к центру) --- */
+
+/* card-1: было -640, стало -540 */
+.card-1 { transform: translate(-540px, -315px) rotate(-20deg) translateZ(-40px); }
+
+/* card-2: было -240, стало -140 */
+.card-2 { transform: translate(-140px, -515px) rotate(10deg) translateZ(-40px); }
+
+/* card-3: было 230, стало 330 */
+.card-3 { transform: translate(330px, -315px) rotate(20deg) translateZ(-40px); }
+
+/* card-4: было 310, стало 410 */
+.card-4 { transform: translate(410px, -115px) rotate(-10deg) translateZ(-40px); }
+
+/* card-5: было 230, стало 330 */
+.card-5 { transform: translate(330px, 295px) rotate(-20deg) translateZ(-40px); }
+
+/* card-6: было -640, стало -540 */
+.card-6 { transform: translate(-540px, 295px) rotate(15deg) translateZ(-40px); }
+
+/* card-7: было -680, стало -580 */
+.card-7 { transform: translate(-580px, -115px) rotate(10deg) translateZ(-40px); }
+
+.card:hover {
+  /* Чуть уменьшен scale, чтобы большие карточки не перекрывали всё вокруг */
+  transform: scale(1.15) rotate(-5deg) translate(0, 0) translateZ(120px);
+  z-index: 20;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  background-color: transparent; 
+}
+
+.card:hover .card-img {
+  transform: scale(1.1);
+}
+
